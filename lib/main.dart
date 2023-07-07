@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:cronogramas_front/telas/autenticacao/recuperarsenha.dart';
+import 'package:cronogramas_front/telas/autenticacao/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,12 +21,12 @@ class App extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       // Index
-      // home: const Login(),
-      // // Páginas Secundárias
-      // routes: {
-      //   '/cadastro': (context) => const Home(),
-      //   '/pagina': (context) => const Pagina(),
-      // },
+      home: const SplashScreen(),
+      // Páginas Secundárias
+      routes: {
+        '/recoverpass': (context) => const RecoverPass(),
+        // '/pagina': (context) => const Pagina(),
+      },
     );
   }
 
