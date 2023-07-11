@@ -1,7 +1,13 @@
 import 'dart:math';
-
+import 'package:cronogramas_front/telas/interacao/listagem/listaaulaslucas.dart';
 import 'package:cronogramas_front/telas/autenticacao/recuperarsenha.dart';
 import 'package:cronogramas_front/telas/autenticacao/splashscreen.dart';
+import 'package:cronogramas_front/telas/inicio/home.dart';
+import 'package:cronogramas_front/telas/interacao/cadastro/cadastroaula.dart';
+import 'package:cronogramas_front/telas/interacao/cadastro/cadastrocurso.dart';
+import 'package:cronogramas_front/telas/interacao/cadastro/cadastrorecesso.dart';
+import 'package:cronogramas_front/telas/interacao/cadastro/cadastroturma.dart';
+import 'package:cronogramas_front/telas/interacao/cadastro/cadastrounidade.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,11 +27,23 @@ class App extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       // Index
-      home: const SplashScreen(),
+      home: const Home(),
       // Páginas Secundárias
       routes: {
         '/recoverpass': (context) => const RecoverPass(),
-        // '/pagina': (context) => const Pagina(),
+        '/listaaulas': (context) => const ListaAulas(),
+        '/listaaulasdetalhes': (context) => const detalhes[curso](),
+        '/home': (context) => const Home(),
+        '/createcurso': (context) => const CreateCurso(),
+        '/createunidade': (context) => const CreateUnidade(),
+        '/createturma': (context) => const CreateTurma(),
+        '/createaula': (context) => const CreateAula(),
+        '/createrecesso': (context) => const CreateRecesso(),
+        '/readallcursos': (context) => const CreateCurso(),
+        '/readallunidades': (context) => const CreateUnidade(),
+        '/readallturmas': (context) => const CreateTurma(),
+        '/readallaulas': (context) => const ReadAllWidget(),
+        '/readallrecessos': (context) => const CreateRecesso(),
       },
     );
   }
