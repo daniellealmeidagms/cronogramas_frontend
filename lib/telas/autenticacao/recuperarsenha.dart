@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class RecoverPass extends StatefulWidget {
@@ -10,7 +9,7 @@ class RecoverPass extends StatefulWidget {
 }
 
 class _RecoverPassState extends State<RecoverPass> {
-  TextEditingController _emailController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
 
   // FirebaseAuth auth = FirebaseAuth.instance;
 
@@ -20,10 +19,10 @@ class _RecoverPassState extends State<RecoverPass> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Recuperar Senha"),
+        title: const Text("Recuperar Senha"),
       ),
       body: Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Center(
           child: SingleChildScrollView(
             child: Form(
@@ -31,9 +30,8 @@ class _RecoverPassState extends State<RecoverPass> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // --- Campo E-mail ---
                   Padding(
-                    padding: EdgeInsets.fromLTRB(3, 15, 3, 15),
+                    padding: const EdgeInsets.fromLTRB(3, 15, 3, 15),
                     child: TextFormField(
                       controller: _emailController,
                       keyboardType: TextInputType.emailAddress,
@@ -44,13 +42,12 @@ class _RecoverPassState extends State<RecoverPass> {
                           return "Este e-mail não é válido";
                         }
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "E-mail para recuperar senha",
                         prefixIcon: Icon(Icons.alternate_email),
                       ),
                     ),
                   ),
-
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
                     child: ElevatedButton(

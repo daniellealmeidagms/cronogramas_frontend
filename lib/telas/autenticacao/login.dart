@@ -66,9 +66,8 @@ class _LoginState extends State<Login> {
                   child: ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        debugPrint("Entrou");
+                        Navigator.pushNamed(context, '/home');
                       }
-                      // Navigator.pushNamed(context, '/home');
                     },
                     style: ButtonStyle(
                       padding: MaterialStateProperty.all(
