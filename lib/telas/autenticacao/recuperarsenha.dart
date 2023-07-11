@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class RecoverPass extends StatefulWidget {
@@ -32,7 +31,6 @@ class _RecoverPassState extends State<RecoverPass> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // --- Campo E-mail ---
                   Padding(
                     padding: const EdgeInsets.fromLTRB(3, 15, 3, 15),
                     child: TextFormField(
@@ -52,7 +50,6 @@ class _RecoverPassState extends State<RecoverPass> {
                       ),
                     ),
                   ),
-
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
                     child: ElevatedButton(
