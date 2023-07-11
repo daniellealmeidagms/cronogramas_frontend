@@ -150,6 +150,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.0"
+  flutter_flow_chart:
+    dependency: "direct main"
+    description:
+      name: flutter_flow_chart
+      sha256: f89aec2ebfb54336d125e329d7fd8b8eb7cc03ea982ccf98455fee6a5cb3f780
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0+1"
   flutter_lints:
     dependency: "direct dev"
     description:
