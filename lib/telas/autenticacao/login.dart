@@ -8,8 +8,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
 
@@ -92,9 +92,9 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 5),
+                  padding: const EdgeInsets.only(top: 5),
                   child: TextButton(
-                    child: Text(
+                    child: const Text(
                       "Esqueceu a senha?",
                       style: TextStyle(
                         color: Colors.white,
