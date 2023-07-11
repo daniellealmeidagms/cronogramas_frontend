@@ -1,33 +1,32 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'home_page_model.dart';
-export 'home_page_model.dart';
-
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
+class ListaAulasSuellen extends StatefulWidget {
+  const ListaAulasSuellen({Key? key}) : super(key: key);
 
   @override
-  _HomePageWidgetState createState() => _HomePageWidgetState();
+  _ListaAulasSuellenState ListaAulasSuellenState() => _ListaAulasSuellenState();
+  
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
+  }
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
-  late HomePageModel _model;
+class _ListaAulasSuellenState extends State<ListaAulasSuellen> {
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => HomePageModel());
+    
   }
 
   @override
   void dispose() {
-    _model.dispose();
 
     super.dispose();
   }
@@ -35,16 +34,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
             'Aulas',
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
+            style: TextStyle(
                   fontFamily: 'Outfit',
                   color: Colors.white,
                   fontSize: 22,
@@ -59,9 +55,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           child: Container(
             width: 392,
             height: 789,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primaryBackground,
-            ),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -86,100 +79,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   20, 20, 20, 20),
-                              child: InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onLongPress: () async {
-                                  context.pushNamed(
-                                    'tela2',
-                                    queryParameters: {
-                                      'texto1': serializeParam(
-                                        'Text',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType: PageTransitionType.fade,
-                                        duration: Duration(milliseconds: 2),
-                                      ),
-                                    },
-                                  );
-                                },
-                                child: Card(
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  elevation: 6,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(6),
-                                  ),
-                                  child: Align(
-                                    alignment: AlignmentDirectional(0, 0),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          70, 20, 70, 20),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Icon(
-                                                Icons.calendar_month_sharp,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                size: 30,
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Align(
-                                                alignment:
-                                                    AlignmentDirectional(0, 0),
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(15, 15, 15, 15),
-                                                  child: Text(
-                                                    'Aula - 03/07/23',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          fontSize: 22,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Align(
-                            alignment: AlignmentDirectional(0, 0),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  20, 20, 20, 20),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
                                 elevation: 6,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(6),
@@ -200,8 +101,77 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             Icon(
                                               Icons.calendar_month_sharp,
                                               color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                                  Color(0xFF004A8D),
+                                              size: 30,
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Align(
+                                              alignment:
+                                                  AlignmentDirectional(0, 0),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(15, 15, 15, 15),
+                                                child: Text(
+                                                  'Aula - 03/07/23',
+                                                  style: TextStyle(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        fontSize: 22,
+                                                      ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Icon(
+                                              Icons.check,
+                                              color: Color(0x4D11A113),
+                                              size: 30,
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0, 0),
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  20, 20, 20, 20),
+                              child: Card(
+                                clipBehavior: Clip.antiAliasWithSaveLayer,
+                                elevation: 6,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(6),
+                                ),
+                                child: Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        70, 20, 70, 20),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Icon(
+                                              Icons.calendar_month_sharp,
+                                              color:
+                                                  Color(0xFF004A8D),
                                               size: 30,
                                             ),
                                           ],
@@ -217,10 +187,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     .fromSTEB(15, 15, 15, 15),
                                                 child: Text(
                                                   'Aula - 04/07/23',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
+                                                  style: TextStyle(
                                                         fontFamily:
                                                             'Readex Pro',
                                                         fontSize: 22,
@@ -244,8 +211,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   20, 20, 20, 20),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
                                 elevation: 4,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(6),
@@ -266,8 +231,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             Icon(
                                               Icons.calendar_month_sharp,
                                               color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                                  Color(0xFF004A8D),
                                               size: 30,
                                             ),
                                           ],
@@ -283,10 +247,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     .fromSTEB(15, 15, 15, 15),
                                                 child: Text(
                                                   'Aula - 05/07/23',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
+                                                  style: TextStyle(
                                                         fontFamily:
                                                             'Readex Pro',
                                                         fontSize: 22,
@@ -310,8 +271,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   20, 20, 20, 20),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
                                 elevation: 4,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(6),
@@ -332,8 +291,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             Icon(
                                               Icons.calendar_month_sharp,
                                               color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                                  Color(0xFF004A8D),
                                               size: 30,
                                             ),
                                           ],
@@ -349,10 +307,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     .fromSTEB(15, 15, 15, 15),
                                                 child: Text(
                                                   'Aula - 06/07/23',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
+                                                  style: TextStyle(
                                                         fontFamily:
                                                             'Readex Pro',
                                                         fontSize: 22,
@@ -376,8 +331,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   20, 20, 20, 20),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
                                 elevation: 4,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(6),
@@ -398,8 +351,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             Icon(
                                               Icons.calendar_month_sharp,
                                               color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                                  Color(0xFF004A8D),
                                               size: 30,
                                             ),
                                           ],
@@ -415,10 +367,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     .fromSTEB(15, 15, 15, 15),
                                                 child: Text(
                                                   'Aula - 07/07/23',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
+                                                  style: TextStyle(
                                                         fontFamily:
                                                             'Readex Pro',
                                                         fontSize: 22,
@@ -442,8 +391,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   20, 20, 20, 20),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
                                 elevation: 4,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(6),
@@ -464,8 +411,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             Icon(
                                               Icons.calendar_month_sharp,
                                               color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                                  Color(0xFF004A8D),
                                               size: 30,
                                             ),
                                           ],
@@ -481,10 +427,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     .fromSTEB(15, 15, 15, 15),
                                                 child: Text(
                                                   'Aula - 10/07/23',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
+                                                  style: TextStyle(
                                                         fontFamily:
                                                             'Readex Pro',
                                                         fontSize: 22,
