@@ -42,6 +42,7 @@ class _LoginState extends State<Login> {
                       } else if (!value.contains("@")) {
                         return "Este e-mail não é válido";
                       }
+                      return null;
                     },
                   ),
                 ),
@@ -58,6 +59,7 @@ class _LoginState extends State<Login> {
                       if (value!.length < 8) {
                         return "Digite uma senha com pelo menos 8 caracteres";
                       }
+                      return null;
                     },
                   ),
                 ),
@@ -113,6 +115,5 @@ class _LoginState extends State<Login> {
         ),
       ),
     );
-    ;
   }
 }

@@ -1,7 +1,8 @@
 import 'dart:math';
 
-import 'package:cronogramas_front/telas/autenticacao/recuperarsenha.dart';
-import 'package:cronogramas_front/telas/autenticacao/splashscreen.dart';
+// import 'package:cronogramas_front/telas/autenticacao/recuperarsenha.dart';
+// import 'package:cronogramas_front/telas/autenticacao/splashscreen.dart';
+import 'package:cronogramas_front/telas/interacao/listagem/listaaulaslucas.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,10 +22,10 @@ class App extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       // Index
-      home: const SplashScreen(),
+      home: const ReadAllWidget(),
       // Páginas Secundárias
-      routes: {
-        '/recoverpass': (context) => const RecoverPass(),
+      routes: const {
+        //'/recoverpass': (context) => const RecoverPass(),
         // '/pagina': (context) => const Pagina(),
       },
     );

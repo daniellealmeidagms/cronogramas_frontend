@@ -44,6 +44,7 @@ class _RecoverPassState extends State<RecoverPass> {
                         } else if (!value.contains("@")) {
                           return "Este e-mail não é válido";
                         }
+                        return null;
                       },
                       decoration: const InputDecoration(
                         labelText: "E-mail para recuperar senha",

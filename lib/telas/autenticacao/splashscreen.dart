@@ -6,6 +6,7 @@ class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
@@ -15,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.didChangeDependencies();
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (_) => Login()));
+          context, MaterialPageRoute(builder: (_) => const Login()));
     });
   }
 
