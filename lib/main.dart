@@ -25,7 +25,8 @@ class App extends StatelessWidget {
       // Páginas Secundárias
       routes: {
         '/recoverpass': (context) => const RecoverPass(),
-        // '/pagina': (context) => const Pagina(),
+        '/listaaulas': (context) => const ListaAulas(),
+        '/listaaulasdetalhes': (context) => const ListaAulasDetalhes(),
       },
     );
   }
