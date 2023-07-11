@@ -8,8 +8,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
 
@@ -42,6 +42,7 @@ class _LoginState extends State<Login> {
                       } else if (!value.contains("@")) {
                         return "Este e-mail não é válido";
                       }
+                      return null;
                     },
                   ),
                 ),
@@ -58,6 +59,7 @@ class _LoginState extends State<Login> {
                       if (value!.length < 8) {
                         return "Digite uma senha com pelo menos 8 caracteres";
                       }
+                      return null;
                     },
                   ),
                 ),
@@ -66,9 +68,8 @@ class _LoginState extends State<Login> {
                   child: ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        debugPrint("Entrou");
+                        Navigator.pushNamed(context, '/home');
                       }
-                      // Navigator.pushNamed(context, '/home');
                     },
                     style: ButtonStyle(
                       padding: MaterialStateProperty.all(
@@ -92,9 +93,9 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 5),
+                  padding: const EdgeInsets.only(top: 5),
                   child: TextButton(
-                    child: Text(
+                    child: const Text(
                       "Esqueceu a senha?",
                       style: TextStyle(
                         color: Colors.white,
@@ -113,6 +114,5 @@ class _LoginState extends State<Login> {
         ),
       ),
     );
-    ;
   }
 }
