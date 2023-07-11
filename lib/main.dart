@@ -26,7 +26,7 @@ class App extends StatelessWidget {
       routes: {
         '/recoverpass': (context) => const RecoverPass(),
         '/listaaulas': (context) => const ListaAulas(),
-        '/listaaulasdetalhes': (context) => const ListaAulasDetalhes(),
+        '/listaaulasdetalhes': (context) => const detalhes[curso](),
       },
     );
   }
