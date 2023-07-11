@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:cronogramas_front/telas/interacao/listagem/listaaulaslucas.dart';
 import 'package:cronogramas_front/telas/autenticacao/recuperarsenha.dart';
 import 'package:cronogramas_front/telas/autenticacao/splashscreen.dart';
 import 'package:cronogramas_front/telas/inicio/home.dart';
@@ -40,7 +40,7 @@ class App extends StatelessWidget {
         '/readallcursos': (context) => const CreateCurso(),
         '/readallunidades': (context) => const CreateUnidade(),
         '/readallturmas': (context) => const CreateTurma(),
-        '/readallaulas': (context) => const CreateAula(),
+        '/readallaulas': (context) => const ReadAllWidget(),
         '/readallrecessos': (context) => const CreateRecesso(),
       },
     );

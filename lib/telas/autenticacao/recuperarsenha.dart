@@ -5,6 +5,7 @@ class RecoverPass extends StatefulWidget {
   const RecoverPass({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _RecoverPassState createState() => _RecoverPassState();
 }
 
@@ -41,6 +42,7 @@ class _RecoverPassState extends State<RecoverPass> {
                         } else if (!value.contains("@")) {
                           return "Este e-mail não é válido";
                         }
+                        return null;
                       },
                       decoration: const InputDecoration(
                         labelText: "E-mail para recuperar senha",
