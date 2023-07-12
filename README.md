@@ -1,4 +1,4 @@
-# Cronogramas Front (em desenvolvimento)
+# Cronogramas Frontend (em desenvolvimento)
 *Projeto Integrador Turma 2023.1 Programador Web SENAC GO CEP Cora Coralina*
 
 ### Introdução (Project Intro)
